@@ -1,4 +1,5 @@
 "use client";
+import { AnalyticsWrapper } from '../../components/analytics';
 
 import { usePathname } from "next/navigation";
 import Banner from "../../components/Banner";
@@ -22,6 +23,8 @@ export default function RootLayout({
           <Header />
           {hideBanner && <Banner />}
           {children}
+          <AnalyticsWrapper />
+
           <Footer />
         </Providers>
       </body>
